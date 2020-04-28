@@ -6,8 +6,20 @@
         <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
+        <h1>ROCK PAPER SCISSORS</h1>
         <script>
+            function getRndInteger(min, max) {
+                return Math.floor(Math.random() * (max - min) ) + min;
+            }
 
+            function computerPlay() {
+                num = getRndInteger(1,4);
+                return (
+                    (num === 1) ? 'Rock' :
+                    (num === 2) ? 'Paper' :
+                    'Scissors'
+                ) 
+            }
         </script>
     </body>
 </html>
