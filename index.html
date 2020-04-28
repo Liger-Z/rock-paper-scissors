@@ -39,6 +39,18 @@
                     return 'Draw game -_-';
                 }
             }
+
+            function game() {
+                var i;
+                for (i = 0; i < 5; i++) {
+                    var playerSelection = prompt('Enter your hand')
+                    var computerSelection = computerPlay()
+                    result = playRound(playerSelection, computerSelection);
+                    console.log('Your hand: ' + playerSelection + '\nComputer\'s Hand: ' + computerSelection + '\nResult: ' + result)
+                }
+            }
+
+            game()
         </script>
     </body>
 </html>
