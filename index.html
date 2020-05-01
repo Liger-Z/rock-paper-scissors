@@ -7,6 +7,20 @@
     </head>
     <body>
         <h1>ROCK PAPER SCISSORS</h1>
+
+        <div class="explanation-container">
+            <p class="explanation">This game of Rock Paper Scissors will be 5 rounds.
+                The game will begin when press one of the buttons below.
+            </p>
+        </div>
+
+        <div class="button-container">
+            <button class="rock">ROCK</button>
+            <button class="paper">PAPER</button>
+            <button class="paper">SCISSORS</button>
+        </div> 
+
+        
         <script>
             function getRndInteger(min, max) {
                 return Math.floor(Math.random() * (max - min) ) + min;
@@ -43,7 +57,7 @@
             function game() {
                 var i;
                 for (i = 0; i < 5; i++) {
-                    var playerSelection = prompt('Enter your hand')
+                    var playerSelection = 
                     var computerSelection = computerPlay()
                     result = playRound(playerSelection, computerSelection);
                     console.log('Your hand: ' + playerSelection + '\nComputer\'s Hand: ' + computerSelection + '\nResult: ' + result)
