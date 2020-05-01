@@ -15,12 +15,14 @@
         </div>
 
         <div class="button-container">
-            <button class="rock">ROCK</button>
-            <button class="paper">PAPER</button>
-            <button class="paper">SCISSORS</button>
+            <button id="btn-rock" value="rock">ROCK</button>
+            <button id="btn-paper" value="paper">PAPER</button>
+            <button id="btn-scissors" value="scissors">SCISSORS</button>
         </div> 
 
-        
+        <div class="results-container">
+            
+        </div>
         <script>
             function getRndInteger(min, max) {
                 return Math.floor(Math.random() * (max - min) ) + min;
@@ -54,17 +56,20 @@
                 }
             }
 
-            function game() {
-                var i;
-                for (i = 0; i < 5; i++) {
-                    var playerSelection = 
-                    var computerSelection = computerPlay()
-                    result = playRound(playerSelection, computerSelection);
-                    console.log('Your hand: ' + playerSelection + '\nComputer\'s Hand: ' + computerSelection + '\nResult: ' + result)
-                }
+            function game(e) {
+                var playerSelection = e.target.value
+                var computerSelection = computerPlay();
+                result = playRound(playerSelection, computerSelection);
+                
             }
 
-            game()
+            const btnRock = document.querySelector('#btn-rock')
+            const btnPaper = document.querySelector('#btn-paper')
+            const btnScissors = document.querySelector('#btn-scissors')
+
+            btnRock.addEventListener('click', game);
+            btnPaper.addEventListener('click', game);
+            btnScissors.addEventListener('click', game);
         </script>
     </body>
 </html>
